@@ -1,0 +1,325 @@
+body {
+    margin: 0px;
+    background-color: black;
+}
+
+.netflix-logo {
+  width: 80px;
+  object-fit: contain;
+}
+
+.movie-cart-icon {
+  width: 70px;
+}
+.link {
+  text-decoration: none;
+  color: white;
+  display: inline-block;
+  padding: 5px;
+
+  border: 1px solid transparent;
+  transition: 0.3s ease;
+  border-radius: 8px;
+}
+
+.link:hover {
+  box-shadow: 0px -2px 5px red;
+}
+
+.scifi-navbar {
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+  gap: 20px;
+}
+
+.scifi-navbar-left-section {
+  padding: 10px;
+}
+
+.scifi-navbar-middle-section {
+  display: flex;
+  flex: 3;
+  align-items: center;
+  justify-content: center;
+}
+
+.search-icon {
+  width: 50px;
+}
+
+.search-button {
+  flex-shrink: 0;
+  background-color: black;
+  border: 0px;
+  padding: 5px;
+
+  transition: box-shadow 0.3s ease;
+}
+
+.search-button:hover {
+  box-shadow: 2px 0px 10px red;
+}
+
+.input-bar {
+  flex: 1;
+  flex-shrink: 1;
+  height: 32px;
+
+  background-color: black;
+  border: 0px;
+  outline: none;
+  padding: 5px;
+  border-top-left-radius: 5px;
+  border-bottom-left-radius: 5px;
+  box-shadow: -3px 0px 5px red;
+  font-size: 16px;
+
+  transition: box-shadow 0.3s ease;
+}
+
+.input-bar::placeholder {
+  color: white;
+  font-family: "Oswald";
+  font-size: 16px;
+  font-weight: 100;
+}
+
+.input-bar:focus {
+  box-shadow: 3px 0px 10px red;
+  color: white;
+  font-family: "Oswald";
+}
+
+.scifi-navbar-right-section {
+  display: flex;
+  align-items: center;
+  flex-direction: row;
+
+  gap: 10px;
+}
+
+.cart-link {
+  position: relative;
+}
+
+.cart-text {
+  position: absolute;
+  top: 14px;
+  right: 36px;
+  font-family: "Oswald";
+  font-size: 14px;
+}
+
+.navbar-right-section-link {
+  text-decoration: none;
+  color: white;
+  display: inline-block;
+  padding: 5px 10px;
+
+  border: 1px solid transparent;
+  border-radius: 8px;
+  font-family: "Oswald";
+  font-size: 16px;
+
+  transition: 0.3s ease;
+  transform: translate(0px, -1px);
+}
+
+.navbar-right-section-link:hover {
+  box-shadow: -2px 3px 10px red;
+  transform: translate(0px, 1px) scale(1.05);
+}
+
+@media (max-width: 768px) {
+  .netflix-logo {
+    max-width: 60px;
+  }
+  .navbar-right-section-link {
+    font-size: 14px;
+  }
+  .scifi-navbar {
+    gap: 5px;
+  }
+  .input-bar {
+    font-size: 14px;
+  }
+  .scifi-navbar-right-section {
+    flex-direction: column;
+    padding: 5px;
+  }
+  .cart-text {
+    font-size: 12px;
+  }
+}
+
+/* main body */
+
+.scifi-banner-section {
+  display: flex;
+  flex-direction: row;
+  justify-content: space-evenly;
+  align-items: center;
+
+  margin-top: 50px;
+  margin-bottom: 50px;
+  box-shadow: -3px 0px 5px red;
+  padding: 15px;
+}
+
+.scifi-banner-text {
+  color: white;
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+}
+
+.scifi-banner-text h1 {
+  font-family: "WDXL Lubrifont JP N";
+  font-weight: 200;
+  font-size: 40px;
+}
+
+.scifi-banner-text h3 {
+  font-size: 25px;
+  font-family: "WDXL Lubrifont JP N";
+  font-weight: 100;
+}
+
+.scifi-image-container img {
+  width: 550px;
+  border-radius: 15px;
+  object-fit: contain;
+}
+
+@media (max-width: 768px) {
+  .scifi-banner-section {
+    flex-direction: column;
+    margin-bottom: 30px;
+  }
+  .scifi-banner-text h3 {
+    margin: 0px;
+    margin-bottom: 30px;
+    font-size: 22px;
+  }
+  .scifi-banner-text h1 {
+    font-size: 35px;
+  }
+  .scifi-image-container img {
+    max-width: 300px;
+  }
+}
+
+.scifi-list-section {
+  margin-top: 70px;
+}
+
+.scifi-list-movie {
+  display: flex;
+  flex-direction: column;
+  gap: 25px;
+
+  padding: 20px;
+}
+
+.scifi-category {
+  color: white;
+  font-family: "Oswald";
+  font-size: 35px;
+
+  margin: 0px;
+}
+
+.scifi-each-box {
+  display: flex;
+  flex-direction: row;
+  gap: 15px;
+  align-items: center;
+  padding: 10px;
+
+  box-shadow: -5px 0px 5px red;
+  transition: 0.3s ease;
+  transform: translate(2px, 2px);
+}
+
+.scifi-each-box:hover {
+  transform: translate(-2px, -2px) scale(1.01);
+
+  box-shadow: 5px 0px 5px red;
+}
+
+.scifi-each-box img {
+  width: 300px;
+  border-radius: 10px;
+  object-fit: contain;
+}
+
+.box-details {
+  color: white;
+  font-family: "Oswald";
+}
+
+.box-details h3 {
+  font-size: 25px;
+  margin: 0px;
+}
+
+.box-details p {
+  font-size: 16px;
+}
+
+.box-details button {
+  background-color: white;
+  color: black;
+  border: 0px;
+  border-radius: 5px;
+
+  padding: 5px 15px;
+  font-size: 13px;
+  font-family: "Oswald";
+
+  transition: all 0.3s ease;
+  transform: translate(2px, 1px);
+}
+
+.box-details button:hover {
+  background-color: transparent;
+  color: white;
+  box-shadow: 2px 0px 10px red;
+  transform: translate(5px, -1px) scale(1.05);
+}
+
+.scifi-list-series {
+  display: flex;
+  flex-direction: column;
+  margin-top: 20px;
+  gap: 20px;
+  padding: 20px;
+}
+
+@media (max-width: 768px) {
+  .scifi-category {
+    font-size: 30px;
+  }
+
+  .scifi-each-box {
+    flex-direction: column;
+  }
+  .scifi-each-box img {
+    max-width: 250px;
+  }
+
+  .box-details h3 {
+    font-size: 20px;
+    text-align: center;
+  }
+
+  .box-details p {
+    font-size: 14px;
+  }
+  .box-details button {
+    font-size: 11px;
+  }
+
+}
+

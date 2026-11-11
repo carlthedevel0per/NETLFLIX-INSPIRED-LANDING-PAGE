@@ -1,0 +1,194 @@
+body {
+    margin: 0px;
+    background-color: black;
+}
+.netflix-logo {
+  width: 80px;
+  object-fit: contain;
+}
+
+.movie-cart-icon {
+  width: 70px;
+}
+.link {
+  text-decoration: none;
+  color: white;
+  display: inline-block;
+  padding: 5px;
+
+  border: 1px solid transparent;
+  transition: 0.3s ease;
+  border-radius: 8px;
+}
+
+.link:hover {
+  box-shadow: 0px -2px 5px red;
+}
+
+.watchlist-navbar {
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+  gap: 20px;
+}
+
+.watchlist-navbar-left-section {
+  padding: 10px;
+}
+
+.watchlist-navbar-right-section {
+  display: flex;
+  align-items: center;
+  flex-direction: row;
+
+  gap: 10px;
+}
+
+.cart-link {
+  position: relative;
+}
+
+.cart-text {
+  position: absolute;
+  top: 14px;
+  right: 37px;
+  font-family: "Oswald";
+  font-size: 14px;
+}
+
+.navbar-right-section-link {
+  text-decoration: none;
+  color: white;
+  display: inline-block;
+  padding: 5px 10px;
+
+  border: 1px solid transparent;
+  border-radius: 8px;
+  font-family: "Oswald";
+  font-size: 16px;
+
+  transition: 0.3s ease;
+  transform: translate(0px, -1px);
+}
+
+.navbar-right-section-link:hover {
+  box-shadow: -2px 3px 10px red;
+  transform: translate(0px, 1px) scale(1.05);
+}
+
+@media (max-width: 768px) {
+  .netflix-logo {
+    max-width: 60px;
+  }
+  .navbar-right-section-link {
+    font-size: 14px;
+  }
+  .watchlist-navbar {
+    gap: 5px;
+  }
+  .cart-text {
+    font-size: 12px;
+  }
+}
+
+/* main body */
+
+.watchlist-section {
+  display: flex;
+  flex-direction: column;
+  gap: 20px;
+  padding: 20px;
+}
+
+.watchlist-container img {
+  width: 350px;
+  object-fit: contain;
+}
+
+.watchlist-specific-info {
+  color: white;
+  font-family: Oswald;
+}
+
+.watchlist-specific-info h2 {
+  font-size: 25px;
+  font-weight: 500;
+}
+
+.watchlist-specific-info p {
+  font-size: 18px;
+  font-weight: 300;
+}
+
+.watchlist-specific-info b {
+  font-size: 18px;
+  font-weight: 400;
+  margin-left: 5px;
+}
+
+.watchlist-container {
+  display: flex;
+  flex-direction: row;
+  gap: 20px;
+  padding: 10px 25px;
+
+  box-shadow: -5px 0px 5px red;
+  transition: 0.3s ease;
+  transform: translate(2px, 2px);
+}
+
+.watchlist-container:hover {
+  box-shadow: 5px 0px 5px red;
+  transform: translate(-2px, -2px) scale(1.01);
+}
+
+.watchlist-details {
+  display: flex;
+  flex-direction: row;
+  align-items: center;
+  justify-content: space-between;
+  flex: 1;
+}
+
+.trailer-button {
+  display: inline-block;
+  text-decoration: none;
+  font-family: Oswald;
+  background-color: transparent;
+  color: white;
+  font-size: 16px;
+  padding: 2px 10px;
+  border-radius: 5px;
+  border: 0px;
+  box-shadow: 0px -3px 5px red;
+
+  transition: 0.3s ease;
+  transform: translate(-1px, 1px);
+}
+
+.trailer-button:hover {
+  transform: translate(2px, 2px) scale(1.05);
+  box-shadow: 0px 3px 5px red;
+}
+
+
+.actual-button {
+  font-family: Oswald;
+  font-size: 20px;
+  background-color: red;
+  color: white;
+  border: 1px transparent;
+  transition: all 0.3s ease;
+  border-radius: 10px;
+  padding: 5px 10px;
+
+  transform: translate(1px, 1px);
+}
+
+.actual-button:hover {
+  box-shadow: -2px 1px 5px red;
+  transform: scale(1.03) translate(-2px, 2px);
+  background-color: transparent;
+
+}
+
