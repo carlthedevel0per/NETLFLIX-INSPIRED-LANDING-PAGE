@@ -30,6 +30,15 @@ body {
   align-items: center;
   justify-content: space-between;
   gap: 20px;
+  background-color: black;
+
+  position: fixed;
+  top: 0;
+  right: 0;
+  left: 0;
+  z-index: 1000;
+
+
 }
 
 .watchlist-navbar-left-section {

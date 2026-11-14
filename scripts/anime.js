@@ -1,4 +1,5 @@
 import {animeList} from "./data/anime-data.js";
+import { addToCart, movieCart, updateCartQuantity } from "./movieCart.js";
 
 let movieListHTML = '';
 let seriesListHTML = '';
@@ -25,7 +26,9 @@ animeList.forEach((animeItem) => {
 
               <p> 🍅 ${animeItem.Ratings.tomatoRating} 🍿 ${animeItem.Ratings.popcornRating} </p> 
 
-              <button> + Add to watchlist </button>
+              <button class="js-add-to-list-button"
+              data-movie-id=${animeItem.id}
+              data-movie-title=${animeItem.title}> + Add to  watchlist </button>
 
           </div>
 
@@ -55,7 +58,9 @@ animeList.forEach((animeItem) => {
 
               <p> 🍅 ${animeItem.Ratings.tomatoRating} 🍿 ${animeItem.Ratings.popcornRating}  </p> 
 
-              <button> + Add to watchlist </button>
+              <button class="js-add-to-list-button"
+              data-movie-id=${animeItem.id}
+              data-movie-title=${animeItem.title}> + Add to  watchlist </button>
 
           </div>
 
@@ -86,6 +91,19 @@ let animeListHTML = `
 
 `;
 
-
 document.querySelector('.js-anime-list').innerHTML = animeListHTML;
+
+updateCartQuantity();
+
+document.querySelectorAll('.js-add-to-list-button').forEach((button) => {
+  button.addEventListener('click', () => {
+    const movieId = button.dataset.movieId;
+    const movieTitle = button.dataset.movieTitle;
+
+    addToCart(movieId, movieTitle);
+    updateCartQuantity();
+    console.log(movieCart);
+  })
+
+});
 

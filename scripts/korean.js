@@ -1,4 +1,5 @@
 import { koreanList } from "./data/korean-data.js";
+import { movieCart, addToCart, updateCartQuantity } from "./movieCart.js";
 
 let movieListHTML = '';
 let seriesListHTML = '';
@@ -25,7 +26,9 @@ koreanList.forEach((koreanItem) => {
 
               <p> 🍅 ${koreanItem.Ratings.tomatoRating} 🍿 ${koreanItem.Ratings.popcornRating} </p> 
 
-              <button> + Add to watchlist </button>
+              <button class="js-add-to-list-button"
+              data-movie-id=${koreanItem.id}
+              data-movie-title=${koreanItem.title}> + Add to  watchlist </button>
 
           </div>
 
@@ -55,7 +58,9 @@ koreanList.forEach((koreanItem) => {
 
               <p> 🍅 ${koreanItem.Ratings.tomatoRating} 🍿 ${koreanItem.Ratings.popcornRating}  </p> 
 
-              <button> + Add to watchlist </button>
+              <button class="js-add-to-list-button"
+              data-movie-id=${koreanItem.id}
+              data-movie-title=${koreanItem.title}> + Add to  watchlist </button>
 
           </div>
 
@@ -86,6 +91,18 @@ let koreanListHTML = `
 
 `;
 
-
 document.querySelector('.js-korean-list').innerHTML = koreanListHTML;
 
+updateCartQuantity();
+
+document.querySelectorAll('.js-add-to-list-button').forEach((button) => {
+  button.addEventListener('click', () => {
+    const movieId = button.dataset.movieId;
+    const movieTitle = button.dataset.movieTitle;
+
+    addToCart(movieId, movieTitle);
+    updateCartQuantity();
+    console.log(movieCart);
+  })
+
+});

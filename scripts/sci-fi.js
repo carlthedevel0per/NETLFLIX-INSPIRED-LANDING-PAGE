@@ -1,4 +1,5 @@
 import { scifiList } from "./data/scifi-data.js";
+import { updateCartQuantity, addToCart, movieCart } from "./movieCart.js";
 
 let movieListHTML = '';
 let seriesListHTML = '';
@@ -23,9 +24,11 @@ scifiList.forEach((scifiItem) => {
 
               <p> ${scifiItem.summary} </p>
 
-              <p> 🍅 ${scifiItem.Ratings.tomatoRating} 🍿 ${scifiItem.Ratings.popcornRating} </p> 
-
-              <button> + Add to watchlist </button>
+              <p> 🍅 ${scifiItem.Ratings.tomatoRating} 🍿 ${scifiItem.Ratings.popcornRating} </p>
+              
+              <button class="js-add-to-list-button"
+              data-movie-id=${scifiItem.id}
+              data-movie-title=${scifiItem.title}> + Add to  watchlist </button>
 
           </div>
 
@@ -55,7 +58,9 @@ scifiList.forEach((scifiItem) => {
 
               <p> 🍅 ${scifiItem.Ratings.tomatoRating} 🍿 ${scifiItem.Ratings.popcornRating}  </p> 
 
-              <button> + Add to watchlist </button>
+              <button class="js-add-to-list-button"
+              data-movie-id=${scifiItem.id}
+              data-movie-title=${scifiItem.title}> + Add to  watchlist </button>
 
           </div>
 
@@ -86,6 +91,19 @@ let sciFiListHTML = `
 
 `;
 
-
 document.querySelector('.js-scifi-list').innerHTML = sciFiListHTML;
+
+updateCartQuantity();
+
+document.querySelectorAll('.js-add-to-list-button').forEach((button) => {
+  button.addEventListener('click', () => {
+    const movieId = button.dataset.movieId;
+    const movieTitle = button.dataset.movieTitle;
+
+    addToCart(movieId, movieTitle);
+    updateCartQuantity();
+    console.log(movieCart);
+  })
+
+});
 

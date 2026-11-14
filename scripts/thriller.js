@@ -1,4 +1,5 @@
 import {thrillerList} from './data/thriller-data.js';
+import { movieCart, addToCart, updateCartQuantity } from './movieCart.js';
 
 let movieListHTML = '';
 let seriesListHTML = '';
@@ -25,7 +26,9 @@ thrillerList.forEach((thrillerItem) => {
 
             <p> 🍅 ${thrillerItem.Ratings.tomatoRating} 🍿 ${thrillerItem.Ratings.popcornRating} </p> 
 
-            <button> + Add to watchlist </button>
+            <button class="js-add-to-list-button"
+            data-movie-id=${thrillerItem.id}
+            data-movie-title=${thrillerItem.title}> + Add to watchlist </button>
 
         </div>
 
@@ -56,7 +59,9 @@ thrillerList.forEach((thrillerItem) => {
 
               <p> 🍅 ${thrillerItem.Ratings.tomatoRating} 🍿 ${thrillerItem.Ratings.popcornRating} </p> 
 
-              <button> + Add to watchlist </button>
+              <button class="js-add-to-list-button"
+              data-movie-id=${thrillerItem.id}
+              data-movie-title=${thrillerItem.title}> + Add to watchlist </button>
 
           </div>
 
@@ -91,8 +96,21 @@ let thrillerListHTML = `
 
 document.querySelector('.js-thriller-list-section').innerHTML = thrillerListHTML;
 
+updateCartQuantity();
 
+document.querySelectorAll('.js-add-to-list-button')
+  .forEach((button) => {
+    button.addEventListener('click', () => {
+      const movieId = button.dataset.movieId;
+      const movieTitle = button.dataset.movieTitle;
 
+      addToCart(movieId, movieTitle);
+      updateCartQuantity();
+      console.log(movieCart);
+
+    });
+
+});
 
 
 
