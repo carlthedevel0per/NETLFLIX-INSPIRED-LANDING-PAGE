@@ -12,7 +12,8 @@ export const scifiList = [
     hours: "2h 29m",
     director: "Anthony Russo and Joe Russo",
     stars: "Robert Downey Jr., Chris Hemsworth, Mark Ruffalo",
-    releaseDate: "2018"
+    releaseDate: "2018",
+    trailer: "https://youtu.be/6ZfuNTqbHE8?si=eOk6MOIiVXPmVSKl"
   },
   {
     id: "scifi2",
@@ -27,7 +28,8 @@ export const scifiList = [
     hours: "2h 21m",
     director: "Joss Whedon",
     stars: "Robert Downey Jr., Chris Evans, Mark Ruffalo",
-    releaseDate: "2015"
+    releaseDate: "2015",
+    trailer: "https://youtu.be/tmeOjFno6Do?si=ms6Rkph2k1SiQ94a"
   }, 
 
   {
@@ -43,7 +45,8 @@ export const scifiList = [
     hours: "2h 4m",
     director: "Joe Johnston",
     stars: "Chris Evans, Hugo Weaving, Samuel L. Jackson",
-    releaseDate: "2011"
+    releaseDate: "2011",
+    trailer: "https://youtu.be/W4DlMggBPvc?si=NFI6gN7WBmkTT_oo"
   }, 
 
   {
@@ -59,7 +62,8 @@ export const scifiList = [
     hours: "2h 6m",
     director: "Jon Favreau",
     stars: "Robert Downey Jr., Gwyneth Paltrow, Terrence Howard",
-    releaseDate: "2008"
+    releaseDate: "2008",
+    trailer: "https://youtu.be/KAE5ymVLmZg?si=O8rbWVKNOAhTFdjU"
   },  
 
   {
@@ -75,7 +79,8 @@ export const scifiList = [
     hours: "1h 55m",
     director: "Kenneth Branagh",
     stars: "Chris Hemsworth, Anthony Hopkins, Natalie Portman",
-    releaseDate: "2011"
+    releaseDate: "2011",
+    trailer: "https://youtu.be/JOddp-nlNvQ?si=_uQDSVltVqSqHyIO"
   },  
 
   {
@@ -91,7 +96,8 @@ export const scifiList = [
     hours: "1h 52m",
     director: "Louis Leterrier",
     stars: "Edward Norton, Liv Tyler, Tim Roth",
-    releaseDate: "2008"
+    releaseDate: "2008",
+    trailer: "https://youtu.be/xbqNb2PFKKA?si=Llk2C_j8hUvhVX_Q"
   },  
 
   {
@@ -107,7 +113,8 @@ export const scifiList = [
     episodes: "8 eps",
     director: "Eric Kripke",
     stars: "Karl Urban, Jack Quaid, Antony Starr",
-    releaseDate: "2019"
+    releaseDate: "2019",
+    trailer: "https://youtu.be/M1bhOaLV4FU?si=RS0IprCpIHwWx2z1"
   },
 
   {
@@ -123,7 +130,8 @@ export const scifiList = [
     episodes: "9 eps",
     director: "Blake Crouch",
     stars: "Joel Edgerton, Jennifer Connelly, Alice Braga",
-    releaseDate: "2024"
+    releaseDate: "2024",
+    trailer: "https://youtu.be/j6ucGt_Xp14?si=jpMX1FWMsW8648AW"
   },
 
   {
@@ -139,7 +147,8 @@ export const scifiList = [
     episodes: "8 eps",
     director: "Zal Batmanglij, Brit Marling",
     stars: "Brit Marling, Jason Isaacs, Scott Wilsona",
-    releaseDate: "2016"
+    releaseDate: "2016",
+    trailer: "https://youtu.be/DvHJtez2IlY?si=-ZdoWflhyAwsLi3f"
   },
 
   {
@@ -155,7 +164,8 @@ export const scifiList = [
     episodes: "9 eps",
     director: "Dan Erickson",
     stars: "Adam Scott, Britt Lower, Zach Cherry",
-    releaseDate: "2022"
+    releaseDate: "2022",
+    trailer: "https://youtu.be/xEQP4VVuyrY?si=_QxE4v3lEg0EDd16"
   },
 
   {
@@ -171,7 +181,8 @@ export const scifiList = [
     episodes: "3 eps",
     director: "Charlie Brooker",
     stars: "Anjana Vasan, Cristin Milioti, Jesse Plemons",
-    releaseDate: "2011"
+    releaseDate: "2011",
+    trailer: "https://youtu.be/-qIlCo9yqpY?si=qjcGOabXEDG0rSIk"
   }
 
 ];

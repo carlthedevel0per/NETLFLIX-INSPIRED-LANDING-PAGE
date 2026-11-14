@@ -37,8 +37,6 @@ body {
   right: 0;
   left: 0;
   z-index: 1000;
-
-
 }
 
 .watchlist-navbar-left-section {
@@ -107,6 +105,7 @@ body {
   flex-direction: column;
   gap: 20px;
   padding: 20px;
+  margin-top: 150px;
 }
 
 .watchlist-container img {

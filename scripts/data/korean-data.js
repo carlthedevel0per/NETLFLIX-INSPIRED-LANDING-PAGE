@@ -12,7 +12,8 @@ export const koreanList = [
   episodes: "20 eps",
   director: "Park In-je and Park Yoon-seo",
   stars: "Go Youn-jung, Ryu Seung-ryong, Cha Tae-hyun",
-  releaseDate: "2023"
+  releaseDate: "2023",
+  trailer: "https://youtu.be/d_SFsZEZAy4?si=cycgtUkgNL3uvreW"
 },
 {
   id: "korean2",
@@ -27,7 +28,8 @@ export const koreanList = [
   hours: "1h 53m",
   director: "Hongsun Kim",
   stars: "Bae Sung-woo, Sung Dong-il, Jang Young-nam",
-  releaseDate: "2019"
+  releaseDate: "2019",
+  trailer: "https://youtu.be/zdF-FC8VJI0?si=_WdbmaYcRa_3BcrQ"
 },
 {
   id: "korean3",
@@ -42,7 +44,8 @@ export const koreanList = [
   hours: "1h 58m",
   director: "Sun Namkoong",
   stars: "Gong Myoung, Shin Eun-soo, Cha Woo-min",
-  releaseDate: "2025"
+  releaseDate: "2025",
+  trailer: "https://youtu.be/0HwDE0HXbqc?si=lrw1gcRRtlFcrl1c"
 },
 {
   id: "korean4",
@@ -57,7 +60,8 @@ export const koreanList = [
   hours: "1h 38m",
   director: "Il Cho",
   stars: "Yoo Ah-in, Park Shin-hye, Jeon Bae-soo",
-  releaseDate: "2020"
+  releaseDate: "2020",
+  trailer: "https://youtu.be/jQ8CCg1tOqc?si=NvQPtEAkzJor5JEV"
 },
 {
   id: "korean5",
@@ -72,7 +76,8 @@ export const koreanList = [
   hours: "1h 48m",
   director: "Jang Hang-jun",
   stars: "Kang Ha-neul, Kim Mu-yeol, Moon Sung-keun",
-  releaseDate: "2017"
+  releaseDate: "2017",
+  trailer: "https://youtu.be/b4p92xc9r6g?si=iJL1-4TbFBjt6oK4"
 },
 {
   id: "korean6",
@@ -87,7 +92,8 @@ export const koreanList = [
   hours: "1h 53m",
   director: "Lee Tae Sung",
   stars: "Yim Si-wan, Park Gyuyoung, Jo Woo-jin",
-  releaseDate: "2025"
+  releaseDate: "2025",
+  trailer: "https://youtu.be/PItlVyrf15U?si=Ogt6C1onfCKlZKkf"
 },
 {
   id: "korean7",
@@ -102,7 +108,8 @@ export const koreanList = [
   episodes: "12 eps",
   director: "Cha Young-hoon",
   stars: "Koo Kyo-hwan, Go Youn-jung, Oh Jung-se",
-  releaseDate: "2026"
+  releaseDate: "2026",
+  trailer: "https://youtu.be/2W9wOtwEWE8?si=-jiWH9nfqRZmASRo"
 },
 {
   id: "korean8",
@@ -117,7 +124,8 @@ export const koreanList = [
   episodes: "16 eps",
   director: "Son Jung-hyun",
   stars: "Seol In-ah, Ryeoun, Lee Su-Chan",
-  releaseDate: "2023"
+  releaseDate: "2023",
+  trailer: "https://youtu.be/DqceSqn0hiA?si=zfhvqfPT6W8mkwpZ"
 },
 {
   id: "korean9",
@@ -132,7 +140,8 @@ export const koreanList = [
   episodes: "16 eps",
   director: "Jung Ji-hyun and Kim Seung-ho",
   stars: "Kim Taeri, Nam Joo-hyuk, Kim Ji-yeon, Choi Hyun-wook, Lee Ju-myeong",
-  releaseDate: "2022"
+  releaseDate: "2022",
+  trailer: "https://youtu.be/gYp4cKumTwU?si=M99CAXh5-woOA3Pj"
 },
 {
   id: "korean10",
@@ -147,7 +156,8 @@ export const koreanList = [
   episodes: "22 eps",
   director: "Choi Joon-bae and Kang Cheol-woo",
   stars: "Hyun Bong-sik, Jung Ae-ri, Jo Jae-yoon",
-  releaseDate: "2021"
+  releaseDate: "2021",
+  trailer: "https://youtu.be/Q6Nki1_8RBU?si=y4CaYSms6D3B5zmb"
 },
 {
   id: "korean11",
@@ -162,7 +172,8 @@ export const koreanList = [
   episodes: "10 eps",
   director: "Chang-hee Lee",
   stars: "Yim Si-wan, Lee Dong-wook, Ahn Eun-jin",
-  releaseDate: "2019"
+  releaseDate: "2019",
+  trailer: "https://youtu.be/bc85-DZwopU?si=lqATlXGF_lteAb0K"
 }
 
 ];

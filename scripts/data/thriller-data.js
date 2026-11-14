@@ -12,7 +12,8 @@ export const thrillerList = [
   hours: "1h 39m",
   director: "Brad Anderson",
   stars: "Sam Worthington, Lily Rabe, Lucy Capri",
-  releaseDate: "2011"
+  releaseDate: "2011",
+  trailer: "https://youtu.be/sCimThZW-Ew?si=GEne4qAvAIVqPsDv"
 },
 {
   id: "thriller2",
@@ -27,7 +28,8 @@ export const thrillerList = [
   hours: "1h 56m",
   director: "Sam Hargrave",
   stars: "Chris Hemsworth, Bryon Lerum, Ryder Lerum",
-  releaseDate: "2020"
+  releaseDate: "2020",
+  trailer: "https://youtu.be/L6P3nI6VnlY?si=pCdT8h_fU_TGH0LB"
 },
 {
   id: "thriller3",
@@ -42,7 +44,8 @@ export const thrillerList = [
   hours: "1h 56m",
   director: "Jordan Peele",
   stars: "Lupita Nyong'o, Winston Duke, Elisabeth Moss",
-  releaseDate: "2019"
+  releaseDate: "2019",
+  trailer: "https://youtu.be/hNCmb-4oXJA?si=4XzucqGvjhxnuE4j"
 },
 {
   id: "thriller4",
@@ -57,7 +60,8 @@ export const thrillerList = [
   hours: "1h 57m",
   director: "M. Night Shyamalan",
   stars: "James McAvoy, Anya Taylor-Joy, Haley Lu Richardson",
-  releaseDate: "2016"
+  releaseDate: "2016",
+  trailer: "https://youtu.be/84TouqfIsiI?si=iPiKicT_ZCvitEdD"
 },
 {
   id: "thriller5",
@@ -72,7 +76,8 @@ export const thrillerList = [
   hours: "1h 31m",
   director: "Jalmari Helander",
   stars: "Jorma Tommila, Aksel Hennie, Jack Doolan",
-  releaseDate: "2022"
+  releaseDate: "2022",
+  trailer: "https://youtu.be/d2k4QAItiSA?si=zy1Quflm0DvnhZZ6"
 },
 {
   id: "thriller6",
@@ -87,7 +92,8 @@ export const thrillerList = [
   hours: "1h 44m",
   director: "Jordan Peele",
   stars: "Daniel Kaluuya, Allison Williams, Bradley Whitford",
-  releaseDate: "2017"
+  releaseDate: "2017",
+  trailer: "https://youtu.be/DzfpyUB60YY?si=eUnNRx_TlZIXW3-o"
 },
 {
   id: "thriller7",
@@ -102,7 +108,8 @@ export const thrillerList = [
   episodes: "16 eps",
   director: "Frank Darabont",
   stars: "Andrew Lincoln, Norman Reedus, Melissa McBride",
-  releaseDate: "2010"
+  releaseDate: "2010",
+  trailer: "https://youtu.be/cu2ApTImBKc?si=xwUQzEYCnphz4BJs"
 },
 {
   id: "thriller8",
@@ -117,7 +124,8 @@ export const thrillerList = [
   episodes: "8 eps",
   director: "Vince Gilligan",
   stars: "Bryan Cranston, Aaron Paul, Anna Gunn",
-  releaseDate: "2008"
+  releaseDate: "2008",
+  trailer: "https://youtu.be/HhesaQXLuRY?si=8fxTGo9OKbCvWyrR"
 },
 {
   id: "thriller9",
@@ -132,7 +140,8 @@ export const thrillerList = [
   episodes: "6 eps",
   director: "Steven Knight",
   stars: "Cillian Murphy, Paul Anderson, Sophie Rundle",
-  releaseDate: "2013"
+  releaseDate: "2013",
+  trailer: "https://youtu.be/oVzVdvGIC7U?si=qJo8BS-qOgACgYjD"
 },
 {
   id: "thriller10",
@@ -147,7 +156,8 @@ export const thrillerList = [
   episodes: "8 eps",
   director: "James Manos Jr.",
   stars: "Michael C. Hall, Jennifer Carpenter, David Zayas",
-  releaseDate: "2006"
+  releaseDate: "2006",
+  trailer: "https://youtu.be/nTOf1FIsBcs?si=y-PN5hrF2VvAqlcV"
 },
 {
   id: "thriller11",
@@ -162,6 +172,7 @@ export const thrillerList = [
   episodes: "9 eps",
   director: "Álex Pina",
   stars: "Úrsula Corberó, Álvaro Morte, Itziar Ituño",
-  releaseDate: "2017"
+  releaseDate: "2017",
+  trailer: "https://youtu.be/_InqQJRqGW4?si=4y7zngyNv091ILx3"
 }
 ];

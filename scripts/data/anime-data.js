@@ -13,7 +13,8 @@ export const animeList = [
   episodes: "13 eps",
   director: "Kôhei Horikoshi",
   stars: "Daiki Yamashita, Justin Briner, Nobuhiko Okamoto",
-  releaseDate: "2016"
+  releaseDate: "2016",
+  trailer: "https://youtu.be/EPVkcwyLQQ8?si=5plpvOAGIUgAFv3r"
 },
 
 {
@@ -29,7 +30,8 @@ export const animeList = [
   hours: "1h 46m",
   director: "Makoto Shinkai",
   stars: "Ryûnosuke Kamiki, Mone Kamishiraishi, Ryō Narita",
-  releaseDate: "2016"
+  releaseDate: "2016",
+  trailer: "https://youtu.be/xU47nhruN-Q?si=bZ9gUYRXCuhMFn8U"
 },
 
 {
@@ -45,7 +47,8 @@ export const animeList = [
   hours: "1h 26m",
   director: "Hayao Miyazaki",
   stars: "Hitoshi Takagi, Noriko Hidaka, Chika Sakamoto",
-  releaseDate: "1988"
+  releaseDate: "1988",
+  trailer: "https://youtu.be/92a7Hj0ijLs?si=HpJtTILejm87Yrh5"
 },
 
 {
@@ -61,7 +64,8 @@ export const animeList = [
   hours: "2h 4m",
   director: "Katsuhiro Ōtomo",
   stars: "Mitsuo Iwata, Nozomu Sasaki, Mami Koyama",
-  releaseDate: "1988"
+  releaseDate: "1988",
+  trailer: "https://youtu.be/nA8KmHC2Z-g?si=sOeHTuuP_7y85YKm"
 },
 
 {
@@ -77,7 +81,8 @@ export const animeList = [
   hours: "1h 23m",
   director: "Mamoru Oshii",
   stars: "Atsuko Tanaka, Iemasa Kayumi, Akio Otsuka",
-  releaseDate: "1995"
+  releaseDate: "1995",
+  trailer: "https://youtu.be/tRkb1X9ovI4?si=he7LuIT_YXBLfRoP"
 },
 
 {
@@ -93,7 +98,8 @@ export const animeList = [
   hours: "1h 22m",
   director: "Satoshi Kon",
   stars: "Junko Iwao, Rica Matsumoto, Shinpachi Tsuji",
-  releaseDate: "1997"
+  releaseDate: "1997",
+  trailer: "https://youtu.be/2O09gQC-KvA?si=FImfIz0bjCqJoKPK"
 },
 
 {
@@ -109,7 +115,8 @@ export const animeList = [
   episodes: "26 eps",
   director: "Koyoharu Gotouge",
   stars: "Natsuki Hanae, Zach Aguilar, Abby Trott",
-  releaseDate: "2019"
+  releaseDate: "2019",
+  trailer: "https://youtu.be/x7uLutVRBfI?si=2XMgJmAz0-WQ-jRM"
 },
 
 {
@@ -125,7 +132,8 @@ export const animeList = [
   episodes: "1201 eps",
   director: "Eiichirô Oda",
   stars: "Mayumi Tanaka, Akemi Okamura, Kazuya Nakai",
-  releaseDate: "1999"
+  releaseDate: "1999",
+  trailer: "https://youtu.be/3Gmo0EXHyKg?si=JcxbJlRfT9N5qxnP"
 },
 
 {
@@ -141,7 +149,8 @@ export const animeList = [
   episodes: "12 eps",
   director: "Yusuke Murata",
   stars: "Makoto Furukawa, Kaito Ishikawa, Max Mittelman",
-  releaseDate: "2015"
+  releaseDate: "2015",
+  trailer: "https://youtu.be/iOFHoZWeEw4?si=-rhehCqC4GFlp07g"
 },
 
 {
@@ -157,7 +166,8 @@ export const animeList = [
   episodes: "24 eps",
   director: "Gege Akutami",
   stars: "Jun'ya Enoki, Adam McArthur, Yuma Uchida",
-  releaseDate: "2020"
+  releaseDate: "2020",
+  trailer: "https://youtu.be/pkKu9hLT-t8?si=nkw9ySacvZUZXxSc"
 },
 
 {
@@ -173,10 +183,9 @@ export const animeList = [
   episodes: "25 eps",
   director: "Yasuko Kobayashi, Hiroshi Seko",
   stars: "Jessie James Grelle, Bryce Papenbrook, Trina Nishimura",
-  releaseDate: "2013"
-},
-
-
+  releaseDate: "2013",
+  trailer: "https://youtu.be/LV-nazLVmgo?si=1sFkDAOAiojNkT8d"
+}
 
 
 ];
