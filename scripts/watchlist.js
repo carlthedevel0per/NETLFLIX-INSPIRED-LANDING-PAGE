@@ -1,4 +1,4 @@
-import {movieCart, updateCartQuantity} from "./movieCart.js";
+import {movieCart, updateCartQuantity, saveToStorage} from "./movieCart.js";
 import {thrillerList} from "./data/thriller-data.js";
 import {koreanList} from "./data/korean-data.js";
 import {animeList} from "./data/anime-data.js";
@@ -6,63 +6,30 @@ import {scifiList} from "./data/scifi-data.js";
 
 updateCartQuantity();
 
-let watchlistHTML = '';
+function renderWatchlistHTML() {
 
-movieCart.forEach((movieItem) => {
+    let watchlistHTML = '';
 
-  thrillerList.forEach((thrillerItem) => {
+    /*
+    function categoryIdentifier(item, watchlistHTML) {
 
-     if (movieItem.movieId === thrillerItem.id && thrillerItem.category === 'movie') {
+        if (item.movieId === item.id && item.category === 'movie') {
 
-      watchlistHTML += `
-      
-        <div class="watchlist-container">
+        watchlistHTML += `
+        
+            <div class="watchlist-container">
 
-          <img src="${thrillerItem.image}">
-
-          <div class="watchlist-details">
-
-              <div class="watchlist-specific-info">
-
-                  <h2> ${thrillerItem.title}<b> ${thrillerItem.hours} </b> </h2>
-                  <a href="${thrillerItem.trailer}" class="trailer-button"> ▶ TRAILER </a>
-                  <p> Directed by: ${thrillerItem.director} </p>
-                  <p> Stars: ${thrillerItem.stars} </p>
-                  <p> Release date: ${thrillerItem.releaseDate} </p>
-
-              </div>
-
-              <div class="watchlist-button">
-
-                  <button class="actual-button"> REMOVE </button>
-
-              </div>
-
-          </div>
-
-      </div>
-      
-      `;
-
-     }
-
-     else if ((movieItem.movieId === thrillerItem.id && thrillerItem.category === 'series')) {
-
-      watchlistHTML += `
-      
-        <div class="watchlist-container">
-
-            <img src="${thrillerItem.image}">
+            <img src="${item.image}">
 
             <div class="watchlist-details">
 
                 <div class="watchlist-specific-info">
 
-                    <h2> ${thrillerItem.title}<b> ${thrillerItem.episodes} </b> </h2>
-                    <a href="${thrillerItem.trailer}" class="trailer-button"> ▶ TRAILER </a>
-                    <p> Directed by: ${thrillerItem.director} </p>
-                    <p> Stars: ${thrillerItem.stars} </p>
-                    <p> Release date: ${thrillerItem.releaseDate} </p>
+                    <h2> ${item.title}<b> ${item.hours} </b> </h2>
+                    <a href="${item.trailer}" class="trailer-button" target="_blank"> ▶ TRAILER </a>
+                    <p> Directed by: ${item.director} </p>
+                    <p> Stars: ${item.stars} </p>
+                    <p> Release date: ${item.releaseDate} </p>
 
                 </div>
 
@@ -75,231 +42,392 @@ movieCart.forEach((movieItem) => {
             </div>
 
         </div>
-      
-      `;
+        
+        `;
 
-     }
+        }
 
-  });
+        else if ((item.movieId === item.id && item.category === 'series')) {
 
-  koreanList.forEach((koreanItem) => {
+        watchlistHTML += `
+        
+            <div class="watchlist-container">
 
-    if (movieItem.movieId === koreanItem.id && koreanItem.category === 'movie') {
+                <img src="${item.image}">
 
-      watchlistHTML += `
-      
+                <div class="watchlist-details">
+
+                    <div class="watchlist-specific-info">
+
+                        <h2> ${item.title}<b> ${item.episodes} </b> </h2>
+                        <a href="${item.trailer}" class="trailer-button" target="_blank"> ▶ TRAILER </a>
+                        <p> Directed by: ${item.director} </p>
+                        <p> Stars: ${item.stars} </p>
+                        <p> Release date: ${item.releaseDate} </p>
+
+                    </div>
+
+                    <div class="watchlist-button">
+
+                        <button class="actual-button"> REMOVE </button>
+
+                    </div>
+
+                </div>
+
+            </div>
+        
+        `;
+
+        }
+    }
+    */
+
+
+    movieCart.forEach((movieItem) => {
+
+    thrillerList.forEach((thrillerItem) => {
+
+        if (movieItem.movieId === thrillerItem.id && thrillerItem.category === 'movie') {
+
+        watchlistHTML += `
+        
+            <div class="watchlist-container">
+
+            <img src="${thrillerItem.image}">
+
+            <div class="watchlist-details">
+
+                <div class="watchlist-specific-info">
+
+                    <h2> ${thrillerItem.title}<b> ${thrillerItem.hours} </b> </h2>
+                    <a href="${thrillerItem.trailer}" class="trailer-button" target="_blank"> ▶ TRAILER </a>
+                    <p> Directed by: ${thrillerItem.director} </p>
+                    <p> Stars: ${thrillerItem.stars} </p>
+                    <p> Release date: ${thrillerItem.releaseDate} </p>
+
+                </div>
+
+                <div class="watchlist-button">
+
+                    <button class="actual-button js-remove-button"
+                    data-movie-id="${thrillerItem.id}"> REMOVE </button>
+
+                </div>
+
+            </div>
+
+        </div>
+        
+        `;
+
+        }
+
+        else if ((movieItem.movieId === thrillerItem.id && thrillerItem.category === 'series')) {
+
+        watchlistHTML += `
+        
+            <div class="watchlist-container">
+
+                <img src="${thrillerItem.image}">
+
+                <div class="watchlist-details">
+
+                    <div class="watchlist-specific-info">
+
+                        <h2> ${thrillerItem.title}<b> ${thrillerItem.episodes} </b> </h2>
+                        <a href="${thrillerItem.trailer}" class="trailer-button" target="_blank"> ▶ TRAILER </a>
+                        <p> Directed by: ${thrillerItem.director} </p>
+                        <p> Stars: ${thrillerItem.stars} </p>
+                        <p> Release date: ${thrillerItem.releaseDate} </p>
+
+                    </div>
+
+                    <div class="watchlist-button">
+
+                        <button class="actual-button js-remove-button"
+                        data-movie-id="${thrillerItem.id}"> REMOVE </button>
+
+                    </div>
+
+                </div>
+
+            </div>
+        
+        `;
+
+        }
+
+    });
+
+
+    koreanList.forEach((koreanItem) => {
+
+        if (movieItem.movieId === koreanItem.id && koreanItem.category === 'movie') {
+
+        watchlistHTML += `
+        
+            <div class="watchlist-container">
+
+            <img src="${koreanItem.image}">
+
+            <div class="watchlist-details">
+
+                <div class="watchlist-specific-info">
+
+                    <h2> ${koreanItem.title}<b> ${koreanItem.hours} </b> </h2>
+                    <a href="${koreanItem.trailer}" class="trailer-button" target="_blank"> ▶ TRAILER </a>
+                    <p> Directed by: ${koreanItem.director} </p>
+                    <p> Stars: ${koreanItem.stars} </p>
+                    <p> Release date: ${koreanItem.releaseDate} </p>
+
+                </div>
+
+                <div class="watchlist-button">
+
+                    <button class="actual-button js-remove-button"
+                    data-movie-id="${koreanItem.id}"> REMOVE </button>
+
+                </div>
+
+            </div>
+
+        </div>
+        
+        `;
+
+        }
+
+        else if (movieItem.movieId === koreanItem.id && koreanItem.category === 'series') {
+
+        watchlistHTML += `
+
         <div class="watchlist-container">
 
-          <img src="${koreanItem.image}">
+            <img src="${koreanItem.image}">
 
-          <div class="watchlist-details">
+            <div class="watchlist-details">
 
-              <div class="watchlist-specific-info">
+                <div class="watchlist-specific-info">
 
-                  <h2> ${koreanItem.title}<b> ${koreanItem.hours} </b> </h2>
-                  <a href="${koreanItem.trailer}" class="trailer-button"> ▶ TRAILER </a>
-                  <p> Directed by: ${koreanItem.director} </p>
-                  <p> Stars: ${koreanItem.stars} </p>
-                  <p> Release date: ${koreanItem.releaseDate} </p>
+                    <h2> ${koreanItem.title}<b> ${koreanItem.episodes} </b> </h2>
+                    <a href="${koreanItem.trailer}" class="trailer-button" target="_blank"> ▶ TRAILER </a>
+                    <p> Directed by: ${koreanItem.director} </p>
+                    <p> Stars: ${koreanItem.stars} </p>
+                    <p> Release date: ${koreanItem.releaseDate} </p>
 
-              </div>
+                </div>
 
-              <div class="watchlist-button">
+                <div class="watchlist-button">
 
-                  <button class="actual-button"> REMOVE </button>
+                    <button class="actual-button js-remove-button"
+                    data-movie-id="${koreanItem.id}"> REMOVE </button>
 
-              </div>
+                </div>
 
-          </div>
+            </div>
 
-      </div>
-      
-      `;
+        </div>
+        
+        
+        `;
 
-     }
+        }
 
-     else if (movieItem.movieId === koreanItem.id && koreanItem.category === 'series') {
+    });
 
-      watchlistHTML += `
+    scifiList.forEach((scifiItem) => {
 
-      <div class="watchlist-container">
+        if (movieItem.movieId === scifiItem.id && scifiItem.category === 'movie') {
 
-          <img src="${koreanItem.image}">
+        watchlistHTML += `
+        
+            <div class="watchlist-container">
 
-          <div class="watchlist-details">
+            <img src="${scifiItem.image}">
 
-              <div class="watchlist-specific-info">
+            <div class="watchlist-details">
 
-                  <h2> ${koreanItem.title}<b> ${koreanItem.episodes} </b> </h2>
-                  <a href="${koreanItem.trailer}" class="trailer-button"> ▶ TRAILER </a>
-                  <p> Directed by: ${koreanItem.director} </p>
-                  <p> Stars: ${koreanItem.stars} </p>
-                  <p> Release date: ${koreanItem.releaseDate} </p>
+                <div class="watchlist-specific-info">
 
-              </div>
+                    <h2> ${scifiItem.title}<b> ${scifiItem.hours} </b> </h2>
+                    <a href="${scifiItem.trailer}" class="trailer-button" target="_blank"> ▶ TRAILER </a>
+                    <p> Directed by: ${scifiItem.director} </p>
+                    <p> Stars: ${scifiItem.stars} </p>
+                    <p> Release date: ${scifiItem.releaseDate} </p>
 
-              <div class="watchlist-button">
+                </div>
 
-                  <button class="actual-button"> REMOVE </button>
+                <div class="watchlist-button">
 
-              </div>
+                    <button class="actual-button js-remove-button"
+                    data-movie-id="${scifiItem.id}"> REMOVE </button>
 
-          </div>
+                </div>
 
-      </div>
-      
-      
-      `;
+            </div>
 
-     }
+        </div>
+        
+        `;
 
-  });
+        }
 
-  scifiList.forEach((scifiItem) => {
+        else if (movieItem.movieId === scifiItem.id && scifiItem.category === 'series') {
 
-    if (movieItem.movieId === scifiItem.id && scifiItem.category === 'movie') {
+        watchlistHTML += `
 
-      watchlistHTML += `
-      
         <div class="watchlist-container">
 
-          <img src="${scifiItem.image}">
+            <img src="${scifiItem.image}">
 
-          <div class="watchlist-details">
+            <div class="watchlist-details">
 
-              <div class="watchlist-specific-info">
+                <div class="watchlist-specific-info">
 
-                  <h2> ${scifiItem.title}<b> ${scifiItem.hours} </b> </h2>
-                  <a href="${scifiItem.trailer}" class="trailer-button"> ▶ TRAILER </a>
-                  <p> Directed by: ${scifiItem.director} </p>
-                  <p> Stars: ${scifiItem.stars} </p>
-                  <p> Release date: ${scifiItem.releaseDate} </p>
+                    <h2> ${scifiItem.title}<b> ${scifiItem.episodes} </b> </h2>
+                    <a href="${scifiItem.trailer}" class="trailer-button" target="_blank"> ▶ TRAILER </a>
+                    <p> Directed by: ${scifiItem.director} </p>
+                    <p> Stars: ${scifiItem.stars} </p>
+                    <p> Release date: ${scifiItem.releaseDate} </p>
 
-              </div>
+                </div>
 
-              <div class="watchlist-button">
+                <div class="watchlist-button">
 
-                  <button class="actual-button"> REMOVE </button>
+                    <button class="actual-button js-remove-button"
+                    data-movie-id="${scifiItem.id}"> REMOVE </button>
 
-              </div>
+                </div>
 
-          </div>
+            </div>
 
-      </div>
-      
-      `;
+        </div>
+        
+        
+        `;
 
-     }
+        }
 
-     else if (movieItem.movieId === scifiItem.id && scifiItem.category === 'series') {
+    });
 
-      watchlistHTML += `
+    animeList.forEach((animeItem) => {
 
-      <div class="watchlist-container">
+        if (movieItem.movieId === animeItem.id && animeItem.category === 'movie') {
 
-          <img src="${scifiItem.image}">
+        watchlistHTML += `
+        
+            <div class="watchlist-container">
 
-          <div class="watchlist-details">
+            <img src="${animeItem.image}">
 
-              <div class="watchlist-specific-info">
+            <div class="watchlist-details">
 
-                  <h2> ${scifiItem.title}<b> ${scifiItem.episodes} </b> </h2>
-                  <a href="${scifiItem.trailer}" class="trailer-button"> ▶ TRAILER </a>
-                  <p> Directed by: ${scifiItem.director} </p>
-                  <p> Stars: ${scifiItem.stars} </p>
-                  <p> Release date: ${scifiItem.releaseDate} </p>
+                <div class="watchlist-specific-info">
 
-              </div>
+                    <h2> ${animeItem.title}<b> ${animeItem.hours} </b> </h2>
+                    <a href="${animeItem.trailer}" class="trailer-button" target="_blank"> ▶ TRAILER </a>
+                    <p> Directed by: ${animeItem.director} </p>
+                    <p> Stars: ${animeItem.stars} </p>
+                    <p> Release date: ${animeItem.releaseDate} </p>
 
-              <div class="watchlist-button">
+                </div>
 
-                  <button class="actual-button"> REMOVE </button>
+                <div class="watchlist-button">
 
-              </div>
+                    <button class="actual-button js-remove-button"
+                    data-movie-id="${animeItem.id}"> REMOVE </button>
 
-          </div>
+                </div>
 
-      </div>
-      
-      
-      `;
+            </div>
 
-     }
+        </div>
+        
+        `;
 
-  });
+        }
 
-  animeList.forEach((animeItem) => {
+        else if (movieItem.movieId === animeItem.id && animeItem.category === 'series') {
 
-    if (movieItem.movieId === animeItem.id && animeItem.category === 'movie') {
+        watchlistHTML += `
+        
+            <div class="watchlist-container">
 
-      watchlistHTML += `
-      
-        <div class="watchlist-container">
+            <img src="${animeItem.image}">
 
-          <img src="${animeItem.image}">
+            <div class="watchlist-details">
 
-          <div class="watchlist-details">
+                <div class="watchlist-specific-info">
 
-              <div class="watchlist-specific-info">
+                    <h2> ${animeItem.title}<b> ${animeItem.episodes} </b> </h2>
+                    <a href="${animeItem.trailer}" class="trailer-button" target="_blank"> ▶ TRAILER </a>
+                    <p> Directed by: ${animeItem.director} </p>
+                    <p> Stars: ${animeItem.stars} </p>
+                    <p> Release date: ${animeItem.releaseDate} </p>
 
-                  <h2> ${animeItem.title}<b> ${animeItem.hours} </b> </h2>
-                  <a href="${animeItem.trailer}" class="trailer-button"> ▶ TRAILER </a>
-                  <p> Directed by: ${animeItem.director} </p>
-                  <p> Stars: ${animeItem.stars} </p>
-                  <p> Release date: ${animeItem.releaseDate} </p>
+                </div>
 
-              </div>
+                <div class="watchlist-button">
 
-              <div class="watchlist-button">
+                    <button class="actual-button js-remove-button"
+                    data-movie-id="${animeItem.id}"> REMOVE </button>
 
-                  <button class="actual-button"> REMOVE </button>
+                </div>
 
-              </div>
+            </div>
 
-          </div>
+        </div>
+        
+        `;
 
-      </div>
-      
-      `;
+        }
 
-     }
+    });
+    
+    });
 
-     else if (movieItem.movieId === animeItem.id && animeItem.category === 'series') {
 
-      watchlistHTML += `
-      
-        <div class="watchlist-container">
+    document.querySelector('.js-watchlist-section').innerHTML = watchlistHTML;
 
-          <img src="${animeItem.image}">
+}
 
-          <div class="watchlist-details">
+renderWatchlistHTML();
+addRemoveButtons();
 
-              <div class="watchlist-specific-info">
+function addRemoveButtons() {
 
-                  <h2> ${animeItem.title}<b> ${animeItem.episodes} </b> </h2>
-                  <a href="${animeItem.trailer}" class="trailer-button"> ▶ TRAILER </a>
-                  <p> Directed by: ${animeItem.director} </p>
-                  <p> Stars: ${animeItem.stars} </p>
-                  <p> Release date: ${animeItem.releaseDate} </p>
+    document.querySelectorAll('.js-remove-button')
+        .forEach((button) => {
 
-              </div>
+            button.addEventListener('click', () => {
+                const movieId = button.dataset.movieId;
 
-              <div class="watchlist-button">
+                let newCart = [];
 
-                  <button class="actual-button"> REMOVE </button>
+                movieCart.forEach((item) => {
 
-              </div>
+                    if (item.movieId !== movieId) {
+                        newCart.push(item);
+                    }
 
-          </div>
+                });
 
-      </div>
-      
-      `;
+                movieCart.length = 0;
 
-     }
+                newCart.forEach((item) => {
+                    movieCart.push(item);
+                });
 
-  });
- 
-});
+                saveToStorage();
 
-document.querySelector('.js-watchlist-section').innerHTML = watchlistHTML;
+                renderWatchlistHTML();
+                addRemoveButtons();
+                updateCartQuantity();
+
+
+            });
+
+    });
+
+}

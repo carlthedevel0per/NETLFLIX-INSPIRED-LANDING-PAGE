@@ -111,6 +111,7 @@ body {
 .watchlist-container img {
   width: 350px;
   object-fit: contain;
+  border-radius: 20px;
 }
 
 .watchlist-specific-info {

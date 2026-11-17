@@ -13,7 +13,10 @@ export const koreanList = [
   director: "Park In-je and Park Yoon-seo",
   stars: "Go Youn-jung, Ryu Seung-ryong, Cha Tae-hyun",
   releaseDate: "2023",
-  trailer: "https://youtu.be/d_SFsZEZAy4?si=cycgtUkgNL3uvreW"
+  trailer: "https://youtu.be/d_SFsZEZAy4?si=cycgtUkgNL3uvreW",
+  keywords: [
+    'moving', 'series'
+  ]
 },
 {
   id: "korean2",
@@ -29,7 +32,10 @@ export const koreanList = [
   director: "Hongsun Kim",
   stars: "Bae Sung-woo, Sung Dong-il, Jang Young-nam",
   releaseDate: "2019",
-  trailer: "https://youtu.be/zdF-FC8VJI0?si=_WdbmaYcRa_3BcrQ"
+  trailer: "https://youtu.be/zdF-FC8VJI0?si=_WdbmaYcRa_3BcrQ",
+  keywords: [
+    'metamorphosis', 'movie'
+  ]
 },
 {
   id: "korean3",
@@ -45,7 +51,10 @@ export const koreanList = [
   director: "Sun Namkoong",
   stars: "Gong Myoung, Shin Eun-soo, Cha Woo-min",
   releaseDate: "2025",
-  trailer: "https://youtu.be/0HwDE0HXbqc?si=lrw1gcRRtlFcrl1c"
+  trailer: "https://youtu.be/0HwDE0HXbqc?si=lrw1gcRRtlFcrl1c",
+  keywords: [
+    'love untangled', 'movie'
+  ]
 },
 {
   id: "korean4",
@@ -61,7 +70,10 @@ export const koreanList = [
   director: "Il Cho",
   stars: "Yoo Ah-in, Park Shin-hye, Jeon Bae-soo",
   releaseDate: "2020",
-  trailer: "https://youtu.be/jQ8CCg1tOqc?si=NvQPtEAkzJor5JEV"
+  trailer: "https://youtu.be/jQ8CCg1tOqc?si=NvQPtEAkzJor5JEV",
+  keywords: [
+    'alive', 'movie', 'zombie'
+  ]
 },
 {
   id: "korean5",
@@ -77,7 +89,10 @@ export const koreanList = [
   director: "Jang Hang-jun",
   stars: "Kang Ha-neul, Kim Mu-yeol, Moon Sung-keun",
   releaseDate: "2017",
-  trailer: "https://youtu.be/b4p92xc9r6g?si=iJL1-4TbFBjt6oK4"
+  trailer: "https://youtu.be/b4p92xc9r6g?si=iJL1-4TbFBjt6oK4",
+  keywords: [
+    'forgotten', 'movie'
+  ]
 },
 {
   id: "korean6",
@@ -93,7 +108,10 @@ export const koreanList = [
   director: "Lee Tae Sung",
   stars: "Yim Si-wan, Park Gyuyoung, Jo Woo-jin",
   releaseDate: "2025",
-  trailer: "https://youtu.be/PItlVyrf15U?si=Ogt6C1onfCKlZKkf"
+  trailer: "https://youtu.be/PItlVyrf15U?si=Ogt6C1onfCKlZKkf",
+  keywords: [
+    'mantis', 'movie'
+  ]
 },
 {
   id: "korean7",
@@ -109,7 +127,10 @@ export const koreanList = [
   director: "Cha Young-hoon",
   stars: "Koo Kyo-hwan, Go Youn-jung, Oh Jung-se",
   releaseDate: "2026",
-  trailer: "https://youtu.be/2W9wOtwEWE8?si=-jiWH9nfqRZmASRo"
+  trailer: "https://youtu.be/2W9wOtwEWE8?si=-jiWH9nfqRZmASRo",
+  keywords: [
+    'we are all trying here', 'series'
+  ]
 },
 {
   id: "korean8",
@@ -125,7 +146,10 @@ export const koreanList = [
   director: "Son Jung-hyun",
   stars: "Seol In-ah, Ryeoun, Lee Su-Chan",
   releaseDate: "2023",
-  trailer: "https://youtu.be/DqceSqn0hiA?si=zfhvqfPT6W8mkwpZ"
+  trailer: "https://youtu.be/DqceSqn0hiA?si=zfhvqfPT6W8mkwpZ",
+  keywords: [
+    'twinkling watermelon', 'series'
+  ]
 },
 {
   id: "korean9",
@@ -141,7 +165,10 @@ export const koreanList = [
   director: "Jung Ji-hyun and Kim Seung-ho",
   stars: "Kim Taeri, Nam Joo-hyuk, Kim Ji-yeon, Choi Hyun-wook, Lee Ju-myeong",
   releaseDate: "2022",
-  trailer: "https://youtu.be/gYp4cKumTwU?si=M99CAXh5-woOA3Pj"
+  trailer: "https://youtu.be/gYp4cKumTwU?si=M99CAXh5-woOA3Pj",
+  keywords: [
+    '2521', 'series'
+  ]
 },
 {
   id: "korean10",
@@ -157,7 +184,10 @@ export const koreanList = [
   director: "Choi Joon-bae and Kang Cheol-woo",
   stars: "Hyun Bong-sik, Jung Ae-ri, Jo Jae-yoon",
   releaseDate: "2021",
-  trailer: "https://youtu.be/Q6Nki1_8RBU?si=y4CaYSms6D3B5zmb"
+  trailer: "https://youtu.be/Q6Nki1_8RBU?si=y4CaYSms6D3B5zmb",
+  keywords: [
+    'mouse', 'series'
+  ]
 },
 {
   id: "korean11",
@@ -173,7 +203,10 @@ export const koreanList = [
   director: "Chang-hee Lee",
   stars: "Yim Si-wan, Lee Dong-wook, Ahn Eun-jin",
   releaseDate: "2019",
-  trailer: "https://youtu.be/bc85-DZwopU?si=lqATlXGF_lteAb0K"
+  trailer: "https://youtu.be/bc85-DZwopU?si=lqATlXGF_lteAb0K",
+  keywords: [
+    'strangers from hell', 'series'
+  ]
 }
 
 ];

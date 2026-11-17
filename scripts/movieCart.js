@@ -64,7 +64,7 @@ export function updateCartQuantity() {
 }
 
 
-function saveToStorage() {
+export function saveToStorage() {
   localStorage.setItem('movieCart', JSON.stringify(movieCart));
 }
 

@@ -14,7 +14,10 @@ export const animeList = [
   director: "Kôhei Horikoshi",
   stars: "Daiki Yamashita, Justin Briner, Nobuhiko Okamoto",
   releaseDate: "2016",
-  trailer: "https://youtu.be/EPVkcwyLQQ8?si=5plpvOAGIUgAFv3r"
+  trailer: "https://youtu.be/EPVkcwyLQQ8?si=5plpvOAGIUgAFv3r",
+  keywords: [
+    'my hero academia', 'series'
+  ]
 },
 
 {
@@ -31,7 +34,10 @@ export const animeList = [
   director: "Makoto Shinkai",
   stars: "Ryûnosuke Kamiki, Mone Kamishiraishi, Ryō Narita",
   releaseDate: "2016",
-  trailer: "https://youtu.be/xU47nhruN-Q?si=bZ9gUYRXCuhMFn8U"
+  trailer: "https://youtu.be/xU47nhruN-Q?si=bZ9gUYRXCuhMFn8U",
+  keywords: [
+    'your name', 'movie'
+  ]
 },
 
 {
@@ -48,7 +54,10 @@ export const animeList = [
   director: "Hayao Miyazaki",
   stars: "Hitoshi Takagi, Noriko Hidaka, Chika Sakamoto",
   releaseDate: "1988",
-  trailer: "https://youtu.be/92a7Hj0ijLs?si=HpJtTILejm87Yrh5"
+  trailer: "https://youtu.be/92a7Hj0ijLs?si=HpJtTILejm87Yrh5",
+  keywords: [
+    'my neighbor totoro', 'movie'
+  ]
 },
 
 {
@@ -65,7 +74,10 @@ export const animeList = [
   director: "Katsuhiro Ōtomo",
   stars: "Mitsuo Iwata, Nozomu Sasaki, Mami Koyama",
   releaseDate: "1988",
-  trailer: "https://youtu.be/nA8KmHC2Z-g?si=sOeHTuuP_7y85YKm"
+  trailer: "https://youtu.be/nA8KmHC2Z-g?si=sOeHTuuP_7y85YKm",
+  keywords: [
+    'akira', 'movie'
+  ]
 },
 
 {
@@ -82,7 +94,10 @@ export const animeList = [
   director: "Mamoru Oshii",
   stars: "Atsuko Tanaka, Iemasa Kayumi, Akio Otsuka",
   releaseDate: "1995",
-  trailer: "https://youtu.be/tRkb1X9ovI4?si=he7LuIT_YXBLfRoP"
+  trailer: "https://youtu.be/tRkb1X9ovI4?si=he7LuIT_YXBLfRoP",
+  keywords: [
+    'ghost in the shell', 'movie'
+  ]
 },
 
 {
@@ -99,7 +114,10 @@ export const animeList = [
   director: "Satoshi Kon",
   stars: "Junko Iwao, Rica Matsumoto, Shinpachi Tsuji",
   releaseDate: "1997",
-  trailer: "https://youtu.be/2O09gQC-KvA?si=FImfIz0bjCqJoKPK"
+  trailer: "https://youtu.be/2O09gQC-KvA?si=FImfIz0bjCqJoKPK",
+  keywords: [
+    'perfect blue', 'movie'
+  ]
 },
 
 {
@@ -116,7 +134,10 @@ export const animeList = [
   director: "Koyoharu Gotouge",
   stars: "Natsuki Hanae, Zach Aguilar, Abby Trott",
   releaseDate: "2019",
-  trailer: "https://youtu.be/x7uLutVRBfI?si=2XMgJmAz0-WQ-jRM"
+  trailer: "https://youtu.be/x7uLutVRBfI?si=2XMgJmAz0-WQ-jRM",
+  keywords: [
+    'demon slayer: kimetsu no yaiba', 'series'
+  ]
 },
 
 {
@@ -133,7 +154,10 @@ export const animeList = [
   director: "Eiichirô Oda",
   stars: "Mayumi Tanaka, Akemi Okamura, Kazuya Nakai",
   releaseDate: "1999",
-  trailer: "https://youtu.be/3Gmo0EXHyKg?si=JcxbJlRfT9N5qxnP"
+  trailer: "https://youtu.be/3Gmo0EXHyKg?si=JcxbJlRfT9N5qxnP",
+  keywords: [
+    'one piece', 'series'
+  ]
 },
 
 {
@@ -150,7 +174,10 @@ export const animeList = [
   director: "Yusuke Murata",
   stars: "Makoto Furukawa, Kaito Ishikawa, Max Mittelman",
   releaseDate: "2015",
-  trailer: "https://youtu.be/iOFHoZWeEw4?si=-rhehCqC4GFlp07g"
+  trailer: "https://youtu.be/iOFHoZWeEw4?si=-rhehCqC4GFlp07g",
+  keywords: [
+    'one punch man', 'series'
+  ]
 },
 
 {
@@ -167,7 +194,10 @@ export const animeList = [
   director: "Gege Akutami",
   stars: "Jun'ya Enoki, Adam McArthur, Yuma Uchida",
   releaseDate: "2020",
-  trailer: "https://youtu.be/pkKu9hLT-t8?si=nkw9ySacvZUZXxSc"
+  trailer: "https://youtu.be/pkKu9hLT-t8?si=nkw9ySacvZUZXxSc",
+  keywords: [
+    'jujutsu kaisen', 'series'
+  ]
 },
 
 {
@@ -184,7 +214,10 @@ export const animeList = [
   director: "Yasuko Kobayashi, Hiroshi Seko",
   stars: "Jessie James Grelle, Bryce Papenbrook, Trina Nishimura",
   releaseDate: "2013",
-  trailer: "https://youtu.be/LV-nazLVmgo?si=1sFkDAOAiojNkT8d"
+  trailer: "https://youtu.be/LV-nazLVmgo?si=1sFkDAOAiojNkT8d",
+  keywords: [
+    'attack on titan', 'series'
+  ]
 }
 
 

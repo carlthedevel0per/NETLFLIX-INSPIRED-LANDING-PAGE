@@ -95,14 +95,161 @@ document.querySelector('.js-korean-list').innerHTML = koreanListHTML;
 
 updateCartQuantity();
 
-document.querySelectorAll('.js-add-to-list-button').forEach((button) => {
-  button.addEventListener('click', () => {
-    const movieId = button.dataset.movieId;
-    const movieTitle = button.dataset.movieTitle;
+function addToWatchlistButtons() {
 
-    addToCart(movieId, movieTitle);
-    updateCartQuantity();
-    console.log(movieCart);
-  })
+  document.querySelectorAll('.js-add-to-list-button')
+    .forEach((button) => {
+      button.addEventListener('click', () => {
+        const movieId = button.dataset.movieId;
+        const movieTitle = button.dataset.movieTitle;
 
-});
+        addToCart(movieId, movieTitle);
+        updateCartQuantity();
+      });
+
+  });
+
+}
+
+function searchFunction() {
+
+  const inputText = document.querySelector('.js-input-box').value.toLowerCase();
+
+  const matchingItem = koreanList.filter((movieItem) => {
+    return movieItem.keywords.includes(inputText);
+  });
+
+  let searchedMovieItem = '';
+  let searchedSeriesItem = '';
+
+  matchingItem.forEach((movieItem) => {
+
+    if (movieItem.category === 'movie') {
+
+      searchedMovieItem += `
+
+        <div class="korean-each-box">
+
+            <div>
+
+                <img src="${movieItem.image}">
+
+            </div>
+
+            <div class="box-details">
+
+                <h3> ${movieItem.title} </h3>
+
+                <p> ${movieItem.summary} </p>
+
+                <p> 🍅 ${movieItem.Ratings.tomatoRating} 🍿 ${movieItem.Ratings.popcornRating}  </p> 
+
+                <button class="js-add-to-list-button"
+                data-movie-id=${movieItem.id}
+                data-movie-title=${movieItem.title}> + Add to  watchlist </button>
+
+            </div>
+
+        </div>
+      
+      
+      `;
+
+    }
+
+    else if (movieItem.category === 'series') {
+
+      searchedSeriesItem += `
+
+        <div class="korean-each-box">
+
+            <div>
+
+                <img src="${movieItem.image}">
+
+            </div>
+
+            <div class="box-details">
+
+                <h3> ${movieItem.title} </h3>
+
+                <p> ${movieItem.summary} </p>
+
+                <p> 🍅 ${movieItem.Ratings.tomatoRating} 🍿 ${movieItem.Ratings.popcornRating}  </p> 
+
+                <button class="js-add-to-list-button"
+                data-movie-id=${movieItem.id}
+                data-movie-title=${movieItem.title}> + Add to  watchlist </button>
+
+            </div>
+
+        </div>
+      
+      
+      
+      `;
+
+    }
+
+  });
+
+  let searchedItemHTML = '';
+
+  if (searchedMovieItem) {
+
+    searchedItemHTML = `
+    
+      <div class="korean-list-movie">
+
+          <h3 class="korean-category"> K-MOVIES </h3>
+
+          ${searchedMovieItem}
+
+      </div>
+    
+    `;
+
+  }
+
+  if (searchedSeriesItem) {
+
+    searchedItemHTML = `
+    
+      <div class="korean-list-series">
+
+          <h3 class="korean-category"> K-MOVIES </h3>
+
+          ${searchedSeriesItem}
+
+      </div>
+    
+    `;
+
+  }
+
+  document.querySelector('.js-korean-list')
+    .innerHTML = searchedItemHTML;
+
+  addToWatchlistButtons();
+
+
+}
+
+document.querySelector('.js-search-button')
+  .addEventListener('click', () => {
+
+    searchFunction();
+    document.querySelector('.js-input-box').value = '';
+
+  });
+
+document.querySelector('.js-input-box')
+  .addEventListener('keydown', (event) => {
+
+    if (event.key === 'Enter') {
+      searchFunction();
+      document.querySelector('.js-input-box').value = '';
+    }
+
+  });
+
