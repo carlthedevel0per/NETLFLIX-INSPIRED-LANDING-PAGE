@@ -96,6 +96,8 @@ let thrillerListHTML = `
 
 document.querySelector('.js-thriller-list-section').innerHTML = thrillerListHTML;
 
+addToWatchlistButtons();
+
 updateCartQuantity();
 
 function addToWatchlistButtons() {
@@ -120,7 +122,11 @@ function searchFunction() {
   const inputText = document.querySelector('.js-input-box').value.toLowerCase();
 
   const matchingItem = thrillerList.filter((movieItem) => {
-    return movieItem.keywords.includes(inputText);
+    return movieItem.keywords.some((keyword) => {
+
+      return keyword.includes(inputText);
+
+    });
   }); 
 
   if (matchingItem.length === 0) {
@@ -203,7 +209,7 @@ function searchFunction() {
 
   if (searchedMovieItem) {
 
-    searchedItemHTML = `
+    searchedItemHTML += `
     
       <div class="thriller-list-movie">
 
@@ -219,7 +225,7 @@ function searchFunction() {
 
   if (searchedSeriesItem) {
 
-    searchedItemHTML = `
+    searchedItemHTML += `
     
       <div class="thriller-list-series">
 
@@ -245,6 +251,7 @@ function searchFunction() {
     
     searchFunction();
     document.querySelector('.js-input-box').value = '';
+    document.querySelector('.js-banner-section').innerHTML = '';
   
   });
 
@@ -255,6 +262,7 @@ function searchFunction() {
 
       searchFunction();
       document.querySelector('.js-input-box').value = '';
+      document.querySelector('.js-banner-section').innerHTML = '';
 
     }
   

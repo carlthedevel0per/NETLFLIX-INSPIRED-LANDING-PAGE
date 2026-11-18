@@ -93,7 +93,11 @@ let animeListHTML = `
 
 document.querySelector('.js-anime-list').innerHTML = animeListHTML;
 
+addToWatchlistButtons();
+
 updateCartQuantity();
+
+
 
 function addToWatchlistButtons() {
 
@@ -118,7 +122,11 @@ function searchFunction() {
   const inputText = document.querySelector('.js-input-box').value.toLowerCase();
 
   const matchingItem = animeList.filter((movieItem) => {
-    return movieItem.keywords.includes(inputText);
+    return movieItem.keywords.some((keyword) => {
+
+      return keyword.includes(inputText);
+
+    });
   });
 
   let searchedMovieItem = '';
@@ -199,7 +207,7 @@ function searchFunction() {
 
   if (searchedMovieItem) {
 
-    searchedItemHTML = `
+    searchedItemHTML += `
     
       <div class="anime-list-movie">
 
@@ -215,7 +223,7 @@ function searchFunction() {
 
   if (searchedSeriesItem) {
 
-    searchedItemHTML = `
+    searchedItemHTML += `
     
       <div class="anime-list-movie">
 
@@ -242,6 +250,7 @@ document.querySelector('.js-search-button')
 
     searchFunction();
     document.querySelector('.js-input-box').value = '';
+    document.querySelector('.js-banner-section').innerHTML = '';
 
   });
 
@@ -251,6 +260,7 @@ document.querySelector('.js-input-box')
     if (event.key === 'Enter') {
       searchFunction();
       document.querySelector('.js-input-box').value = '';
+      document.querySelector('.js-banner-section').innerHTML = '';
     }
 
   });

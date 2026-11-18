@@ -140,19 +140,22 @@ body {
 
 @media (max-width: 768px) {
   .netflix-logo {
-    max-width: 60px;
+    max-width: 50px;
   }
   .navbar-right-section-link {
-    font-size: 14px;
+    font-size: 12px;
   }
   .korean-navbar {
     gap: 5px;
   }
   .input-bar {
-    font-size: 14px;
+    font-size: 12px;
+  }
+  .input-bar::placeholder {
+    font-size: 12px;
   }
   .korean-navbar-right-section {
-    flex-direction: column;
+    flex-direction: row;
     padding: 5px;
   }
   .cart-text {
@@ -334,6 +337,10 @@ body {
   }
   .box-details button {
     font-size: 11px;
+  }
+
+  .box-details {
+    width: 100%;
   }
 
 }
